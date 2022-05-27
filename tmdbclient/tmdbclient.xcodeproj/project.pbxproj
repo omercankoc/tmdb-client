@@ -61,6 +61,7 @@
 		6A22082F282556A50084EFB2 /* tmdbclient */ = {
 			isa = PBXGroup;
 			children = (
+				6AA0E3842840C4700048986B /* Resources */,
 				6A22084128255AFF0084EFB2 /* Service */,
 				6A22083E282556C50084EFB2 /* Model */,
 				6A220830282556A50084EFB2 /* tmdbclientApp.swift */,
@@ -96,6 +97,13 @@
 				6A22084428256F670084EFB2 /* MovieStore.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6AA0E3842840C4700048986B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
