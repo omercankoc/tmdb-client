@@ -2,12 +2,12 @@
 //  ContentView.swift
 //  tmdbclient
 //
-//  Created by Ömer Can Koç on 6.05.2022.
+//  Created by Ömer Can Koç on 27.05.2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MoviesView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -16,6 +16,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MoviesView()
     }
 }

@@ -2,7 +2,7 @@
 //  tmdbclientApp.swift
 //  tmdbclient
 //
-//  Created by Ömer Can Koç on 6.05.2022.
+//  Created by Ömer Can Koç on 27.05.2022.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct tmdbclientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesView()
         }
     }
 }
