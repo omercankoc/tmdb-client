@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A25449D28489E5F0099C336 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25449C28489E5F0099C336 /* MovieDetailView.swift */; };
+		6A25449F284903840099C336 /* MoviesSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25449E284903840099C336 /* MoviesSliderView.swift */; };
 		6AA0E3B828410BEE0048986B /* tmdbclientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0E3B728410BEE0048986B /* tmdbclientApp.swift */; };
 		6AA0E3BA28410BEE0048986B /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0E3B928410BEE0048986B /* MoviesView.swift */; };
 		6AA0E3BC28410BEF0048986B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA0E3BB28410BEF0048986B /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A25449C28489E5F0099C336 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		6A25449E284903840099C336 /* MoviesSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSliderView.swift; sourceTree = "<group>"; };
 		6AA0E3B428410BEE0048986B /* tmdbclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmdbclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA0E3B728410BEE0048986B /* tmdbclientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdbclientApp.swift; sourceTree = "<group>"; };
 		6AA0E3B928410BEE0048986B /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				6AA0E3B928410BEE0048986B /* MoviesView.swift */,
 				6AA0E3D528440AE80048986B /* MoviesCardView.swift */,
+				6A25449C28489E5F0099C336 /* MovieDetailView.swift */,
+				6A25449E284903840099C336 /* MoviesSliderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,10 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A25449D28489E5F0099C336 /* MovieDetailView.swift in Sources */,
 				6AA0E3CE2843D1820048986B /* ErrorModel.swift in Sources */,
 				6AA0E3CA28410C7F0048986B /* MovieModel.swift in Sources */,
 				6AA0E3CC2843D12E0048986B /* GenreModel.swift in Sources */,
 				6AA0E3D02843D1F50048986B /* DiscoverModel.swift in Sources */,
+				6A25449F284903840099C336 /* MoviesSliderView.swift in Sources */,
 				6AA0E3D22843FDFA0048986B /* MoviesViewModel.swift in Sources */,
 				6AA0E3BA28410BEE0048986B /* MoviesView.swift in Sources */,
 				6AA0E3B828410BEE0048986B /* tmdbclientApp.swift in Sources */,

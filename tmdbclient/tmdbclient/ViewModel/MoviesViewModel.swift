@@ -12,7 +12,7 @@ class MoviesViewModel : ObservableObject {
     public var placeholders = Array(repeating: MovieModel(id : Int(UUID().uuidString), overview: nil, title: nil), count: 10)
     
     func getMovies(sortBy : String){
-        let url = URL(string: "\(APIViewModel.baseURL)/discover/movie?api_key=\(APIViewModel.apiKey)&language=en-US&sort_by=\(sortBy)&include_adult=false&include_video=false&page=1")
+        let url = URL(string: "\(APIViewModel.baseURL)/movie/upcoming?api_key=\(APIViewModel.apiKey)&language=en-US&page=1")
         
         var request = URLRequest(url : url!)
         request.httpMethod = "GET"
