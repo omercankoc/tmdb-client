@@ -11,8 +11,8 @@ class MoviesViewModel : ObservableObject {
     @Published var items : [MovieModel]?
     public var placeholders = Array(repeating: MovieModel(id : Int(UUID().uuidString), overview: nil, title: nil), count: 10)
     
-    func getMovies(sortBy : String){
-        let url = URL(string: "\(APIViewModel.baseURL)/movie/upcoming?api_key=\(APIViewModel.apiKey)&language=en-US&page=1")
+    func getMovies(path : String){
+        let url = URL(string: "\(APIViewModel.baseURL)\(path)?api_key=\(APIViewModel.apiKey)&language=en-US&page=1")
         
         var request = URLRequest(url : url!)
         request.httpMethod = "GET"
@@ -21,7 +21,7 @@ class MoviesViewModel : ObservableObject {
             if error != nil {
                 do {
                     let res : ErrorModel = try JSONDecoder().decode(ErrorModel.self, from : data!)
-                    print("ERROR GET DATA!",res.status_message)
+                    print("ERROR GET DATA!",res.status_message as Any)
                     return
                 } catch {
                     print(error)

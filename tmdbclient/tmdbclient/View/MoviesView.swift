@@ -9,8 +9,19 @@ import SwiftUI
 
 struct MoviesView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false, content: {
+                VStack {
+                    MoviesCardView(title: "Now Playing", path: "/movie/now_playing", orientation: "vertical")
+                    MoviesCardView(title: "Upcoming", path: "/movie/upcoming",orientation: "horizontal")
+                    MoviesCardView(title: "Popular", path: "/movie/popular",orientation: "horizontal")
+                }
+                .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+            })
+            .background(Color("background"))
+            .navigationBarHidden(true)
+            .ignoresSafeArea(.all,edges:.leading)
+        }
     }
 }
 

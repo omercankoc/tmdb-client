@@ -12,23 +12,21 @@ struct MoviesCardView: View {
     @ObservedObject private var viewModel = MoviesViewModel()
     
     var title : String
-    var sortBy : String
-    
+    var path : String
     var orientation : String = "horizontal"
     
     var body: some View {
-        VStack {
+        VStack(spacing : 0) {
             HStack {
                 Text(title)
-                    .font(.title2)
+                    .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 Spacer()
-                
             }
             .padding()
             ScrollView(.horizontal,showsIndicators: false) {
-                HStack(spacing : 15){
+                HStack(spacing : 5){
                     ForEach(viewModel.items ?? viewModel.placeholders, id: \.id) { item in
                         NavigationLink(
                             destination: MovieDetailView(),
@@ -43,7 +41,7 @@ struct MoviesCardView: View {
             Spacer()
         }
         .onAppear {
-            viewModel.getMovies(sortBy: sortBy)
+            viewModel.getMovies(path: path)
         }
     }
 }
@@ -61,15 +59,16 @@ struct MovieCardViewItem : View {
                 .redacted(reason: item.poster_path == nil ? .placeholder : .init())
                 .cornerRadius(8)
             HStack {
-                VStack(alignment: .leading, spacing: 0){
+                VStack(alignment: .leading, spacing:0){
                     Text(item.title ?? "Loading...")
                         .font(.system(size: orientation == "horizontal" ? 17 : 15))
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .foregroundColor(.black)
                         .redacted(reason: item.title == nil ? .placeholder : .init())
                     Text(item.overview ?? "Loading...")
                         .font(.system(size: orientation == "horizontal" ? 15 : 13))
-                        .lineLimit(2)
+                        .lineLimit(3)
                         .foregroundColor(.gray)
                         .redacted(reason: item.overview == nil ? .placeholder : .init())
                 }
@@ -82,6 +81,6 @@ struct MovieCardViewItem : View {
 
 struct MoviesCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MoviesCardView(title : "TITLE", sortBy : "popularity.asc")
+        MoviesCardView(title : "Popular", path : "/movie/popular", orientation: "horizontal")
     }
 }
